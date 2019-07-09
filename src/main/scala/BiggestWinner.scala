@@ -13,10 +13,10 @@ val spark = org.apache.spark.sql.SparkSession.builder
 
 import spark.implicits._
 
-val outputDir = "/Users/anishjoshi/Downloads/SparkProject/tester/"
+val outputDir = "Enter Output Path Here"
 val runner: Dataset[Row] = spark.read
     .option("header", value = true)
-    .csv(s"/Users/anishjoshi/Downloads/SparkProject/data/local/*/*.csv")
+    .csv(s"Enter Input Path Here/*/*.csv")
     .drop("ISIN", "Mnemonic", "SecurityType", "Currency", "MaxPrice", "MinPrice", "TradedVolume", "NumberOfTrades")
 
 
