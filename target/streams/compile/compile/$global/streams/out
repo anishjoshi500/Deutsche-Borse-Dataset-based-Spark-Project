@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/anishjoshi/Downloads/SparkProject/src/main/scala/MostTraded.scala:25:41: value === is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  val z = x.join(y).where("maxtradeamt" === "tradeamt" and "date" === "date")[0m
+[0m[[0m[31merror[0m] [0m[0m                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/anishjoshi/Downloads/SparkProject/src/main/scala/MostTraded.scala:25:67: value === is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m  val z = x.join(y).where("maxtradeamt" === "tradeamt" and "date" === "date")[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
