@@ -13,11 +13,11 @@ val spark = org.apache.spark.sql.SparkSession.builder
 
 import spark.implicits._
 
-val outputDir = "/Users/anishjoshi/Downloads/SparkProject/tester/"
+val outputDir = "Enter Output Path Here"
 
 val runner: Dataset[Row] = spark.read
     .option("header", value = true)
-    .csv(s"/Users/anishjoshi/Downloads/SparkProject/data/local/*/*.csv")
+    .csv(s"Enter Input Path Here/*/*.csv")
     .drop("ISIN", "Mnemonic", "SecurityType", "Currency", "StartPrice", "MinPrice", "EndPrice", "NumberOfTrades")
 
 val y = runner.withColumn("tradeamt",expr("MaxPrice * TradedVolume as tradeamt")).groupBy("SecurityID", "date").agg(sum("tradeamt").as("tradeamt")).orderBy(desc("date"),asc("tradeamt"))
